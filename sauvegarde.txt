@@ -1,0 +1,47 @@
+@media (min-width:320px){ /*Ci dessus les instructions en cas d'emploi sur smartphone*/
+    p{
+        font-size: 3vh;
+    }
+
+    h1{
+        font-size: 4vh;
+        text-decoration: none;
+        color: black;
+    }
+    
+    h2{
+        font-size: 3vh;
+        text-decoration: none;
+        color: red;
+        top: 5vh;
+        right: 20px;
+    }
+    
+    h3{
+        font-size: 3vh;
+        text-decoration: none;
+        color: black;
+        top: 10vh;
+        right: 20px;
+    }
+    
+    h4{
+        font-size: 3vh;
+        text-decoration: none;
+        color: black;
+    }
+
+    #mode{
+        height: 0px;
+        width: 0px;
+        position: fixed;
+    }
+
+    #container
+    {
+        /*ermet de bloquer chaque diapositive au centre de la fenêtre*/
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}

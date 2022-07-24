@@ -1,0 +1,202 @@
+/* Ceci est un commentaire*/
+
+@font-face { /*Permet de choisir sa propre police*/
+    font-family: "maPolice";
+    src: url("font/comic-sans-ms.ttf"); /*il faut rentrer le chemin du fichier*/
+}
+
+body{
+     /*permet de choisir un fond d'écran*/
+     background: no-repeat url("fond.png");
+     background-attachment: fixed;
+     background-size:100%
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+    /* Donne à la page, les transitions fluides*/
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+#container div{
+    color: black;
+    font-family: "maPolice", serif;
+
+    /*Permet de bloquer chaque diapositive au centre de la fenêtre*/
+    height: 100vh;
+    display: flex;
+
+    /*permet de centrer le texte au centre de la diapositive*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    scroll-snap-align: start;
+}
+
+
+p{
+    font-size: 1vw;
+    padding-left: 20px;
+    border: none solid 1px;
+}
+
+
+h1{
+    font-size: 12vh;
+    text-decoration: none;
+    color: black;
+    border: none solid 1px;
+    text-align: center;
+
+}
+
+h2{
+    font-size: 5vh;
+    text-decoration: none;
+    color: black;
+    border: none solid 1px;
+    text-align: center;
+}
+
+h3{
+    font-size: 5vh;
+    text-decoration: none;
+    color: black;
+    border: none solid 1px;
+    text-align: center;
+}
+
+h4{
+    font-size: 7vh;
+    border: none solid 1px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#container
+{
+    /*Permet de bloquer chaque diapositive au centre de la fenêtre*/
+    scroll-snap-type: y mandatory;
+    overflow-y: visible;
+    height: 100vh;
+
+
+}
+
+#mode{
+    height: 40px;
+    width: 180px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;	
+    font-family: "maPolice",serif;
+    padding-top: 11px;
+    text-decoration: none;
+    outline: none;
+    opacity: 0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    animation: disparition 1s;
+}
+
+
+#mode:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+  }
+
+#mode:hover {
+    color: #fff;
+    background-color: #4CAF50;
+    opacity:1;
+}
+
+#mode:hover:after {
+    animation: disparition 1s;
+}
+
+@keyframes disparition {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 900px){ /*Ci dessus les instructions en cas d'emploi sur smartphone*/
+    p{
+        font-size: 1vw;
+        padding-left: 20px;
+        border: none solid 1px;
+    }
+    
+    
+    h1{
+        font-size: 3%;
+        text-decoration: none;
+        color: black;
+        border: none solid 1px;
+        text-align: center;
+    
+    }
+    
+    h2{
+        font-size: 2%;
+        text-decoration: none;
+        color: black;
+        border: none solid 1px;
+        text-align: center;
+    }
+    
+    h3{
+        font-size: 2vmin;
+        text-decoration: none;
+        color: black;
+        border: none solid 1px;
+        text-align: center;
+    }
+    
+    h4{
+        font-size: 2vmin;
+        border: none solid 1px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    
+
+    #mode{
+        height: 0px;
+        width: 0px;
+        position: fixed;
+    }
+
+    #container
+    {
+        /*ermet de bloquer chaque diapositive au centre de la fenêtre*/
+        scroll-snap-type: y mandatory;
+        overflow-y: visible;
+        height: 100vh;
+    }
+}
+
+
+
+
+
+
+
